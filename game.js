@@ -56,8 +56,15 @@ var game = prompt("Would you like to learn a little about me?");
         userInput(qu3, feedback1, feedback2, feedback3, feedback4);
         userYes(qu3);
 
+      var qu4 = prompt("This next question contains some music thought. Is one of the styles of music that I like called Indie?");
+          feedback1 = "Sorry Indie is not really my thing.";
+          feedback2 = "Thats right. Indie really isnt for me.";
+          feedback3 = "You answered " + qu4 + ". Sorry Indie isnt really my style of music.";
+          feedback4 = "You answered " + qu4 + ". Thats right Im more of a Electronic music person.";
+        userInput(qu4, feedback1, feedback2, feedback3, feedback4);
+        userNo(qu4);
 
-alert("You got " + right + " out of 3.");
+alert("You got " + right + " out of 4.");
 }
 
 

@@ -12,5 +12,7 @@ Code Fellows Project.
 
 Have fun and Good Luck
 
-
-
+___________________
+\__Corey Berning__/
+   \-----------/
+    \         /
