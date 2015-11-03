@@ -16,3 +16,15 @@ ___________________
 \__Corey Berning__/
    \-----------/
     \         /
+
+
+Joke of the day: 
+
+How to hide your important files from people without making Hidden folders
+1. Go to Desktop and create a new folder
+2. Name the folder Internet Explorer
+3. Change the folder icon to Internet Explorer
+4. Keep it in a corner of the desktop
+Now, no one will open internet explorer!
+
+						Brought to you by: www.javacodegeeks.com
