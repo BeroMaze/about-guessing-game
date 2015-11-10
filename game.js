@@ -16,19 +16,28 @@ var noResp = [
   "Sorry, but it True. Together they weight 121 pounds.",
   "Thats right. Indie really isnt for me."
 ]
+
+//array for image yes and no
 //function to count yes's
-var userYes = function(resp) {
+var userYes = function(resp, face) {
       if ((resp.toUpperCase() === "YES") || (resp.toUpperCase() === "Y"))  {
         right++;
+        var smile = document.getElementById(face).src = 'smileface.jpg';
+      }
+      else {
+        var smile = document.getElementById(face).src = 'cryface.jpg';
       }
     }
 //function to count no's
-var userNo = function(resp){
+var userNo = function(resp, face){
       if ((resp.toUpperCase() === "N") || (resp.toUpperCase() === "NO")) {
         right++;
-        console.log(right);
+        var smile = document.getElementById(face).src = 'smileface.jpg';
       }
+      else {
+      var smile = document.getElementById(face).src = 'cryface.jpg';
     }
+}
 // function for user input for the questions
 var userInput = function(resp, answer, yesR, noR) {
   if ((resp.toUpperCase() === "YES") || (resp.toUpperCase() === "Y")) {
@@ -38,11 +47,14 @@ var userInput = function(resp, answer, yesR, noR) {
     var question = document.getElementById(answer).innerHTML = noR;
  }
 }
+
+
 //function for the numbers guesssing game
   var numGame = function() {
     var number = Math.floor(Math.random() * 5) + 1;
       var qu5 = prompt("Lets play a little side game. This one is between you and the computer. Guess a number 1-5");
         while (Number(qu5) === 0) {
+
           qu5 = prompt("You did not enter a number. Please Enter a Number that is between 1-5.");
         }
         while ((Number(qu5) < 1) || (Number(qu5) > 5)) {
@@ -81,28 +93,28 @@ var numResults = function() {
 var questionB1 = function(){
       var qu1 = prompt("Was I born in Wisconsin?");
       userInput (qu1, "answer1", yesResp[0], noResp[0])
-        userNo(qu1);
+        userNo(qu1, 'face1');
 }
 
 //question 2
 var questionB2 = function(){
       var qu2 = prompt("Is the color of my car Matte Black?");
         userInput(qu2, "answer2", yesResp[1], noResp[1]);
-        userYes(qu2);
+        userYes(qu2, 'face2');
 }
 
 //question 3
 var questionB3 = function(){
       var qu3 = prompt("Is the weight of both my dogs added together over 120 pounds?");
         userInput(qu3, 'answer3', yesResp[2], noResp[2]);
-        userYes(qu3);
+        userYes(qu3, 'face3');
 }
 
 //question 4
 var questionB4 = function(){
       var qu4 = prompt("This next question contains some music thought. Is one of the styles of music that I like called Indie?");
         userInput(qu4, "answer4", yesResp[3], noResp[3]);
-        userNo(qu4);
+        userNo(qu4, 'face4');
 }
 
 //number guessing game
