@@ -2,6 +2,20 @@
 var right = 0;
 //numGuess is how many trys it takes the user to guess the number
 var numGuess = 1;
+// array of yes answer results
+var yesResp = [
+  "Nope, sorry I was really born in Denver, Colorado.",
+  "That's correct, all black everything.",
+  "That's correct, together they weight 121 pounds.",
+  "Sorry Indie is not really my thing."
+]
+// array of no answer results
+var noResp = [
+  "You are correct, I was really born in Denver, Colorado.",
+  "Sorry, but it is. There is a custom finish on it.",
+  "Sorry, but it True. Together they weight 121 pounds.",
+  "Thats right. Indie really isnt for me."
+]
 //function to count yes's
 var userYes = function(resp) {
       if ((resp === "yes") || (resp === "Yes") || (resp === "y") || (resp === "Y") || (resp === "YES"))  {
