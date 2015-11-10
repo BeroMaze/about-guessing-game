@@ -120,15 +120,18 @@ var questionB4 = function(){
 }
 
 //number guessing game
-        numGame();
+        var questionB5 = function() {
+          numGame();
+        }
 
+var gameResults = function() {
 //tells the user how they did
-alert("You got " + right + " out of 4.");
-alert("It took you " + numGuess + " trys to guess the number.");
+document.getElementById("outOf").innerHTML = "You got " + right + " out of 4.";
+document.getElementById("numof").innerHTML = "It took you " + numGuess + " trys to guess the number.";
 
 //tells the user how the did in the guessing game
 numResults();
-
-
 }
+
+// }
 
