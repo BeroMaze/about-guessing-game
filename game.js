@@ -20,12 +20,12 @@ var userNo = function(resp){
 var userInput = function(resp, feedback1, feedback2, feedback3, feedback4) {
   console.log(resp);
   if ((resp === "yes") || (resp === "Yes") || (resp === "y") || (resp === "Y") || (resp === "YES")) {
+    var question = document.getElementById(answer).innerHTML = feedback3;
     console.log(feedback1);
-    alert(feedback3);
   }
  else {
     console.log(feedback2);
-    alert(feedback4);
+    var question = document.getElementById(answer).innerHTML = feedback4;
  }
 }
 //function for the numbers guesssing game
@@ -47,23 +47,23 @@ var userInput = function(resp, feedback1, feedback2, feedback3, feedback4) {
                   numGuess++;
                 }
                 while (Number(qu5) === number) {
-                 alert("Great Job. " + number + " was the right number.");
-                 break;
+                 document.getElementById('answer5').innerHTML = "Great Job. " + number + " was the right number.";
+                  break;
                }
              }
 // Results of user guessing game
 var numResults = function() {
       if (Number(numGuess) === 1) {
-            alert("Great Job One guess. Thats inpressive!!!");
+        document.getElementById("numRus").innerHTML = "Great Job One guess. Thats inpressive!!!";
       }
       else if (Number(numGuess) === 2) {
-            alert("Not bad. 2 guess is pretting good.");
+        document.getElementById("numRus").innerHTML = "Not bad. 2 guess is pretting good.";
       }
       else if (Number(numGuess) === 3) {
-            alert("3 guesses, 60% isn't the worst.");
+        document.getElementById("numRus").innerHTML = "3 guesses, 60% isn't the worst.";
       }
       else {
-            alert("The computer really got you this time.");
+        document.getElementById("numRus").innerHTML = "The computer really got you this time.";
       }
 }
 
