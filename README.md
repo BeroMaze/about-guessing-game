@@ -2,12 +2,13 @@ About Me Guessing Game
 ----------------------
 
 This is a guessing game that goes asked the users different questions about me. 
-After each question the computer alerts whether or not the user got the answer right.
-At the end of the game the computer alerts the user how well the did. 
+There are four questions on the page that the user can answer by pressing the 
+answer button. There is also a numbers game that the user will be able to play 
+against the computer to see if they can guess what the right number is.
 
-The user will go through the prompts the answer the questions and from the answers 
-the user will be alerted the promper responce. 
-
+Once the user has answered all the question they can press the results button to
+see their overall results. The results of each question will also be displayed 
+next to the answer button after the user has answered the question. 
 Code Fellows Project.
 
 Have fun and Good Luck
