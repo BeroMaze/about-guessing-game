@@ -17,7 +17,7 @@ var userNo = function(resp){
       }
     }
 // function for user input for the questions
-var userInput = function(resp, feedback1, feedback2, feedback3, feedback4) {
+var userInput = function(resp, answer, feedback1, feedback2, feedback3, feedback4) {
   console.log(resp);
   if ((resp === "yes") || (resp === "Yes") || (resp === "y") || (resp === "Y") || (resp === "YES")) {
     var question = document.getElementById(answer).innerHTML = feedback3;
