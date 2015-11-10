@@ -4,29 +4,49 @@
   <title>Guessing Game</title>
 </head>
 <body>
-<h1>About Me Guessing Game</h1>
 
-<p1>This is a guessing game to learn a little more a bought Me.
-    There will be four questions about me, see how many you can get
-    right. There will also be a extra question to see if you are
-    smarter then the computer. good luck.</p1>
+<h1 id = 'mTitle'>About Me Guessing Game</h1>
+  <p1 id = 'dis'>This is a guessing game to learn a little more a bought Me.
+      There will be four questions about me, see how many you can get
+      right. <br /> There will also be a extra question to see if you are
+      smarter then the computer. good luck.</p1>
 
-<h2>Game Questions</h2>
+  <h2 id = 'gameQ'>Game Questions</h2>
 
+    <div class ="resultsB">
+      <button onclick = 'gameResults()' class = "results">Results</button>
+      <br />
+      <p3 id = 'outOf' class='results'></p3>
+      <br />
+      <p3 id = 'numof' class='results'></p3>
+      <br />
+      <p3 id = 'numRus' class='results'></p3>
+    </div>
 
-  <li><h3>Was I born in Wisconsin?</h3></li>
+<div id = 'questions'>
+  <h3 class="questionsText">Was I born in Wisconsin?</h3>
+      <button onclick ="questionB1()" class="button">Answer</button>
+      <p3 id ='answer1' class = "answerText" ></p3>
 
-  <li><h3>Is the color of my car Matte Black?</h3></li>
+  <h3 class="questionsText">Is the color of my car Matte Black?</h3>
+      <button onclick="questionB2()" class="button">Answer</button>
+      <p3 id ='answer2' class = "answerText"></p3>
 
-  <li><h3>Is the weight of both my dogs added together over 120 pounds?</h3></li>
+  <h3 class="questionsText">Is the weight of both my dogs added together over 120 pounds?</h3>
+      <button onclick="questionB3()" class="button">Answer</button>
+      <p3 id ='answer3' class = "answerText"></p3>
 
-  <li><h3>This next question contains some music thought. Is one of
-    the styles of music that I like called Indie?</h3></li>
+  <h3 class="questionsText">This next question contains some music thought. Is one of
+            the styles of music that I like called Indie?</h3>
+      <button onclick="questionB4()" class="button">Answer</button>
+      <p3 id ='answer4' class = "answerText"></p3>
 
-  <li><h3>Lets play a little side game. This one is between you and
-    the computer. Guess a number 1-5"</h3></li>
+  <h3 class="questionsText" >Lets play a little side game. This one is between you and
+                        the computer. Guess a number 1-5.</h3>
+      <button onclick='questionB5()' class="button">Answer</button>
+      <p3 id ='answer5' class = "answerText"></p3>
 
-</ol>
+</div>
 
 <script src ="game.js"></script>
 
