@@ -1,22 +1,25 @@
 body {
   background-color: black;
+  text-align: center;
 }
 
 #mTitle {
-  color: rgba(70, 45, 250, .85);
-  position: relative;
-  left: 30%;
+  color: rgb(70, 45, 250);
   border-bottom: dotted;
   width: 360px;
+  position: relative;
+  left: 37%;
 }
 #dis {
-  color: rgba(90, 75, 250, 1);
+  color: rgb(90, 75, 250);
 }
 #gameQ {
-  color: rgba(50, 180, 250, 1);
+  color: rgb(50, 180, 250);
   border: dotted;
-  background-color: rgba(70, 45, 250, .55);
+  background-color: rgba(70, 45, 250, .50);
   width: 180px;
+  position: relative;
+  left: 43%;
 }
 #questions {
   position: relative;
@@ -25,18 +28,18 @@ body {
 .resultsB {
   border: solid;
   width: 270px;
-  color: rgba(0, 250, 25, 1);
+  color: rgb(0, 250, 25);
   position: relative;
-  left: 50%;
-  top: -50px;
+  /*left: 50%;
+  top: -50px;*/
 }
 
 .questionsText {
-  color: rgba(50, 180, 250, 1);
+  color: rgb(50, 180, 250);
 
 }
 .answerText {
-  color: rgba(0, 250, 25, 1);
+  color: white;
 }
 .button {
   background-color: red;
@@ -44,4 +47,9 @@ body {
   height: 35px;
   width: 70px;
   font-size: 15px;
+}
+.answerFace {
+  position: relative;
+  left: 5%;
+  vertical-align: middle;
 }

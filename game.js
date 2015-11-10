@@ -92,7 +92,7 @@ var numResults = function() {
 //question 1
 var questionB1 = function(){
       var qu1 = prompt("Was I born in Wisconsin?");
-      userInput (qu1, "answer1", yesResp[0], noResp[0])
+      userInput (qu1, "answer1", yesResp[0], noResp[0]);
         userNo(qu1, 'face1');
 }
 
