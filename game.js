@@ -19,23 +19,27 @@ var noResp = [
 
 //array for image yes and no
 //function to count yes's
-var userYes = function(resp, face) {
+var userYes = function(resp, face, button) {
       if ((resp.toUpperCase() === "YES") || (resp.toUpperCase() === "Y"))  {
         right++;
         var smile = document.getElementById(face).src = 'smileface.jpg';
+        document.getElementById(input).disabled = true;
       }
       else {
         var smile = document.getElementById(face).src = 'cryface.jpg';
+        document.getElementById(input).disabled = true;
       }
     }
 //function to count no's
-var userNo = function(resp, face){
+var userNo = function(resp, face, button){
       if ((resp.toUpperCase() === "N") || (resp.toUpperCase() === "NO")) {
         right++;
         var smile = document.getElementById(face).src = 'smileface.jpg';
+        document.getElementById(input).disabled = true;
       }
       else {
       var smile = document.getElementById(face).src = 'cryface.jpg';
+      document.getElementById(input).disabled = true;
     }
 }
 // function for user input for the questions
@@ -76,50 +80,55 @@ var userInput = function(resp, answer, yesR, noR) {
 // Results of user guessing game
 var numResults = function() {
       if (Number(numGuess) === 1) {
-        document.getElementById("numRus").innerHTML = "Great Job One guess. Thats inpressive!!!";
+        document.getElementById("numRus").innerHTML = "Great Job One guess. Thats inpressive!!!".fontcolor('green') ;
       }
       else if (Number(numGuess) === 2) {
-        document.getElementById("numRus").innerHTML = "Not bad. 2 guess is pretting good.";
+        document.getElementById("numRus").innerHTML = "Not bad. 2 guess is pretting good.".fontcolor('green') ;
       }
       else if (Number(numGuess) === 3) {
-        document.getElementById("numRus").innerHTML = "3 guesses, 60% isn't the worst.";
+        document.getElementById("numRus").innerHTML = "3 guesses, 60% isn't the worst.".fontcolor('red') ;
       }
       else {
-        document.getElementById("numRus").innerHTML = "The computer really got you this time.";
+        document.getElementById("numRus").innerHTML = "The computer really got you this time.".fontcolor('red');
       }
 }
 
 //question 1
-var questionB1 = function(){
-      var qu1 = prompt("Was I born in Wisconsin?");
-      userInput (qu1, "answer1", yesResp[0], noResp[0]);
-        userNo(qu1, 'face1');
+var questionB1 = function() {
+        // var qu1 =  prompt("Was I born in Wisconsin?");
+      var qu1 = document.getElementById("qu1").value;
+      userInput (qu1, "answer1", yesResp[0].fontcolor('red'), noResp[0].fontcolor('green'));
+        userNo(qu1, 'face1', 'button1');
 }
 
 //question 2
 var questionB2 = function(){
-      var qu2 = prompt("Is the color of my car Matte Black?");
-        userInput(qu2, "answer2", yesResp[1], noResp[1]);
-        userYes(qu2, 'face2');
+      // var qu2 = prompt("Is the color of my car Matte Black?");
+        var qu2 = document.getElementById("qu2").value;
+        userInput(qu2, "answer2", yesResp[1].fontcolor('green'), noResp[1].fontcolor('red'));
+        userYes(qu2, 'face2', 'button2');
 }
 
 //question 3
 var questionB3 = function(){
-      var qu3 = prompt("Is the weight of both my dogs added together over 120 pounds?");
-        userInput(qu3, 'answer3', yesResp[2], noResp[2]);
-        userYes(qu3, 'face3');
+      // var qu3 = prompt("Is the weight of both my dogs added together over 120 pounds?");
+        var qu3 = document.getElementById("qu3").value;
+        userInput(qu3, 'answer3', yesResp[2].fontcolor('green'), noResp[2].fontcolor('red'));
+        userYes(qu3, 'face3', 'button3');
 }
 
 //question 4
 var questionB4 = function(){
-      var qu4 = prompt("This next question contains some music thought. Is one of the styles of music that I like called Indie?");
-        userInput(qu4, "answer4", yesResp[3], noResp[3]);
-        userNo(qu4, 'face4');
+      // var qu4 = prompt("This next question contains some music thought. Is one of the styles of music that I like called Indie?");
+        var qu4 = document.getElementById("qu4").value;
+        userInput(qu4, "answer4", yesResp[3].fontcolor('red'), noResp[3].fontcolor('green'));
+        userNo(qu4, 'face4', 'button4');
 }
 
 //number guessing game
         var questionB5 = function() {
           numGame();
+          document.getElementById('button5').disabled = true;
         }
 
 var gameResults = function() {
