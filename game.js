@@ -8,14 +8,14 @@ var yesResp = [
   "That's correct, all black everything.",
   "That's correct, together they weight 121 pounds.",
   "Sorry Indie is not really my thing."
-]
+];
 // array of no answer results
 var noResp = [
   "You are correct, I was really born in Denver, Colorado.",
   "Sorry, but it is. There is a custom finish on it.",
   "Sorry, but it True. Together they weight 121 pounds.",
   "Thats right. Indie really isnt for me."
-]
+];
 
 //array for image yes and no
 //function to count yes's
@@ -23,11 +23,11 @@ var userYes = function(resp, face, button) {
       if ((resp.toUpperCase() === "YES") || (resp.toUpperCase() === "Y"))  {
         right++;
         var smile = document.getElementById(face).src = 'smileface.jpg';
-        document.getElementById(input).disabled = true;
+        document.getElementById(button).readOnly = true;
       }
       else {
         var smile = document.getElementById(face).src = 'cryface.jpg';
-        document.getElementById(input).disabled = true;
+        document.getElementById(button).readOnly = true;
       }
     }
 //function to count no's
@@ -35,11 +35,11 @@ var userNo = function(resp, face, button){
       if ((resp.toUpperCase() === "N") || (resp.toUpperCase() === "NO")) {
         right++;
         var smile = document.getElementById(face).src = 'smileface.jpg';
-        document.getElementById(input).disabled = true;
+        document.getElementById(button).readOnly = true;
       }
       else {
       var smile = document.getElementById(face).src = 'cryface.jpg';
-      document.getElementById(input).disabled = true;
+      document.getElementById(button).readOnly = true;
     }
 }
 // function for user input for the questions
@@ -98,7 +98,7 @@ var questionB1 = function() {
         // var qu1 =  prompt("Was I born in Wisconsin?");
       var qu1 = document.getElementById("qu1").value;
       userInput (qu1, "answer1", yesResp[0].fontcolor('red'), noResp[0].fontcolor('green'));
-        userNo(qu1, 'face1', 'button1');
+        userNo(qu1, 'face1', 'qu1');
 }
 
 //question 2
