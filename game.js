@@ -106,7 +106,7 @@ var questionB2 = function(){
       // var qu2 = prompt("Is the color of my car Matte Black?");
         var qu2 = document.getElementById("qu2").value;
         userInput(qu2, "answer2", yesResp[1].fontcolor('green'), noResp[1].fontcolor('red'));
-        userYes(qu2, 'face2', 'button2');
+        userYes(qu2, 'face2', 'qu2');
 }
 
 //question 3
@@ -114,7 +114,7 @@ var questionB3 = function(){
       // var qu3 = prompt("Is the weight of both my dogs added together over 120 pounds?");
         var qu3 = document.getElementById("qu3").value;
         userInput(qu3, 'answer3', yesResp[2].fontcolor('green'), noResp[2].fontcolor('red'));
-        userYes(qu3, 'face3', 'button3');
+        userYes(qu3, 'face3', 'qu3');
 }
 
 //question 4
@@ -122,13 +122,13 @@ var questionB4 = function(){
       // var qu4 = prompt("This next question contains some music thought. Is one of the styles of music that I like called Indie?");
         var qu4 = document.getElementById("qu4").value;
         userInput(qu4, "answer4", yesResp[3].fontcolor('red'), noResp[3].fontcolor('green'));
-        userNo(qu4, 'face4', 'button4');
+        userNo(qu4, 'face4', 'qu4');
 }
 
 //number guessing game
         var questionB5 = function() {
           numGame();
-          document.getElementById('button5').disabled = true;
+          document.getElementById('qu5').disabled = true;
         }
 
 var gameResults = function() {
