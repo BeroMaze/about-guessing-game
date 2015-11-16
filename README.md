@@ -2,8 +2,8 @@ About Me Guessing Game
 ----------------------
 
 This is a guessing game that goes asked the users different questions about me. 
-There are four questions on the page that the user can answer by pressing the 
-answer button. There is also a numbers game that the user will be able to play 
+There are four questions on the page that the user can answer by filling in the 
+text box. There is also a numbers game that the user will be able to play 
 against the computer to see if they can guess what the right number is.
 
 Once the user has answered all the question they can press the results button to
