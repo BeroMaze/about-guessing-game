@@ -1,7 +1,7 @@
 // right is to count how many answers the user gets right
 var right = 0;
 //numGuess is how many trys it takes the user to guess the number
-var numGuess = 1;
+var numGuess = 0;
 // array of yes answer results
 var yesResp = [
   "Nope, sorry I was really born in Denver, Colorado.",
@@ -74,6 +74,8 @@ var userInput = function(resp, answer, yesR, noR) {
         }
         while (Number(qu5) === number) {
           document.getElementById('answer5').innerHTML = "Great Job. " + number + " was the right number.";
+          numGuess++;
+          document.getElementById('qu5').disabled = true;
           break;
         }
   }
@@ -128,7 +130,6 @@ var questionB4 = function(){
 //number guessing game
         var questionB5 = function() {
           numGame();
-          document.getElementById('qu5').disabled = true;
         }
 
 var gameResults = function() {
